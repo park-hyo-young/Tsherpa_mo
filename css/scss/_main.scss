@@ -1,0 +1,499 @@
+// 클래스 미개설 시
+.class-none-box {
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.main-teacher-school {
+    padding: 3.6rem 0 2.9rem;
+    // 학교 정보
+    .school-report{
+        text-align: center;
+        // 학교 명
+        p {
+            margin-bottom: 1.05rem;
+            font-size: 1.4rem;
+            letter-spacing: -0.07rem;
+        }
+        // 학년 반
+        strong, .std-name {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.1rem;
+            // 학생 번호 이름
+            &.std-name {
+                margin-left: 0.8rem;
+                font-weight: 400;
+            }
+        }
+        // 학생 총 인원수
+        .std-num {
+            height: 2rem;
+            margin: 0 0.5rem;
+            padding: 0 0.75rem;
+            font-size: 1.2rem;
+            border-radius: 0.2rem;
+            color: #999;
+            letter-spacing: -0.06rem;
+            background-color:#f3f5f9;
+            img {
+                width: 1rem;
+                height: 1.1rem;
+                margin-right: 0.45rem;
+            }
+        }
+    }
+    // 교사용 버튼
+    .main-tea-btn {
+        width: 100%;
+        margin-top: 2.5rem;
+        // 버튼 공통 요소
+        .tea-btn {
+            display: block;
+            width: calc(50% - 0.4rem);
+            padding: 1.5rem 0;
+            border-radius: 2.2rem;
+            text-align: center;
+            font-size: 1.4rem;
+            letter-spacing: -0.07rem;
+            // 초대코드
+            &.invite-code {
+                border: 0.1rem solid #bbb;
+                color: #666;
+
+                span {
+                    font-size: 1.4rem;
+                    &:first-child {
+                        position: relative;
+                        margin-right: 0.6rem;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 0.1rem;
+                            height: 1.2rem;
+                            top: 0.5rem;
+                            right: -0.5rem;
+                            background-color: #bbb;
+                        }
+                    }
+                }
+            }
+            // 학생 관리 버튼
+            &.stu-manage {
+                color: #fff;
+                background-color: $main-color;
+                img {
+                    width: 1.3rem;
+                    height: 1.45rem;
+                }
+            }
+        }
+    }
+}
+// 환영문구
+.main-noitce-popup {
+    padding: 1.6rem 0;
+    color: #fff;
+    background-color: $main-color;
+    img {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    p {
+        margin-left: 1.1rem;
+        font-size: 1.4rem;
+        letter-spacing: -0.07rem;
+    
+    }
+}
+// 콘텐츠 영역
+.main-content-area {
+    padding: 3.6rem 0 4.95rem;
+    background-color: $background-color;
+    .inner {
+        // 콘텐츠 명
+        .content-list-title {
+            display: block;
+            margin-bottom: 1.6rem;
+            color: #000;
+            h6 {
+                display: inline-block;
+                font-size: 1.6rem; 
+                font-weight: bold;
+            }
+            img {
+                display: inline-block;
+                margin-bottom: 0.1rem;
+                margin-left: 0.5rem;
+                width: 0.45rem;
+                height: 0.9rem;
+            }
+        }
+        // 콘텐츠 내용
+        .content-list-body {
+            margin-bottom: 3.6rem;
+            padding: 0.8rem 2rem;
+            border-radius: 0.4rem;
+            background-color: #fff;
+            
+            > ul {
+                li {
+                    border-bottom: 0.1rem solid #e0e0e0;
+    
+                    &:last-child {
+                        border: 0;
+                    }
+                    a {
+                        padding: 2rem 0;
+                        display: block;
+                        letter-spacing: -0.07rem;
+                        > p {
+                            margin-bottom: 0.8rem;
+                        }
+                    }
+                    .con-text-title {
+                        line-height: 2.1rem;
+                        font-size: 1.4rem;
+                        color: #000;
+                        word-break: keep-all;
+                    }
+                    // 과제 제출 콘텐츠
+                    dl {
+                        padding: 2rem 0;
+                        width: calc(100% - 8rem);
+                        // 과제 진행중 유무/날짜
+                        dd {
+                            margin-bottom: 0.5rem;
+                            .content-mack {
+                                display: inline-block;
+                                width: 4.8rem;
+                                height: 2.2rem;
+                                margin-right: 0.5rem;
+                                color: #fff;
+                                text-align: center;
+                                line-height: 2.2rem;
+                                font-size: 1.1rem;
+                                letter-spacing: -0.05rem;
+                                border-radius: 2rem;
+                            }
+                        }
+                        // 과제 종료시
+                        >.off {
+                            color: #666;
+                        }
+                    }
+                    // 과제 진행중일 시
+                    .ing {
+                        background-color: $main-color;
+                    }
+                    // 과제 종료시
+                    .finsh {
+                        background-color: #bbb;
+                    }
+                    // 과제 제출 버튼
+                    .task-sumit {
+                            width: 7rem;
+                            height: 3.2rem;
+                            padding: 0;
+                            color: #fff;
+                            font-size: 1.2rem;
+                            text-align: center;
+                            line-height: 3.2rem;
+                            border-radius: 5rem;
+                            box-sizing: border-box;
+                            // 진행중인 과제 버튼
+                            &.btn-number-ing {
+                                background-color: #fff;
+                                border: 1px solid $main-color;
+                                color: $main-color;
+                            }
+                            // 종료된 과제 버튼
+                            &.btn-number-finsh {
+                                border: 1px solid #bbb;
+                                color: #bbb;
+                            }
+                        }
+                    }
+                }
+            &:last-child {
+                margin-bottom: 0;
+                padding: 2.5rem 2rem 2.8rem;
+            }
+            // 급식 정보
+            .school-meal-date {
+                margin-bottom: 3.75rem;
+                // 날짜 이동 버튼
+                a {
+                    display: block;
+                    width: 2rem;
+                    height: 2rem;
+                    img {
+                        width: 100%;
+                    }
+                }
+                // 날짜
+                span {
+                    padding: 0.25rem 0;
+                    color: #000;
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                }
+            }
+            // 급식 메뉴
+            .school-meal-menu {
+                p {
+                    text-align: center;
+                }
+                ul {
+                    letter-spacing: -0.07rem;
+                    text-align: center;
+                    li {
+                        margin-top: 1.5rem;
+                        font-size: 1.4rem;
+                        &:first-child {
+                            margin-top: 3rem;
+                        }
+                    }
+                }
+            }
+            // 콘텐츠 내에 등록된 정보 없을 시
+            .content-none {
+                padding: 10.85rem 0 10.8rem;
+                font-size:1.4rem;
+                letter-spacing: -0.07rem;
+
+                &.none-center {
+                    padding: 0 0 13.95rem;
+                    text-align: center;
+                }
+            }
+            &.content-class-none {
+                display: flex;
+                flex-direction:column;
+                justify-content: center;
+                height: 23rem;
+                box-sizing: border-box;
+                letter-spacing: -0.07rem;
+                > p {
+                    margin-bottom: 1rem;
+                    font-size: 1.4rem;
+                    line-height: 2.1rem;
+                }
+            }
+        }
+    }
+    .con-date-text {
+        font-size: 1.3rem;
+        color: #999;
+    }
+}
+
+// 마이페이지
+.mypage-title-arer {
+    padding: 1.5rem 0;
+    border-bottom: 0.1rem solid #e0e0e0;
+    text-align: center;
+    
+    h4 {
+        margin-bottom: 1.2rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing: -0.09rem;
+    }
+    p {
+        color: #999;
+        font-size: 1.2rem;
+        letter-spacing: -0.06rem;
+    }
+}   
+.mypage-body-arer {
+    padding: 2.8rem 2rem 5rem;
+
+    input {
+        margin: 1.5rem 0 3.15rem;
+        
+        &.code-bottom {
+            margin-bottom: 1.6rem;
+        }
+    }
+    .phone-num-group {
+        margin: 1.5rem 0 3.15rem;
+        font-size: 1.2rem;
+        input {
+            margin: 0 0.75rem 0 0.85rem;
+            &.frist-num {
+                width: 80%;
+                margin-left: 0;
+            }
+            &.last-num {
+                margin-right: 0;
+            }
+        }
+    }
+    p {
+        margin-bottom: 4rem;
+        color: #666;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        letter-spacing: -0.06rem;
+    }
+}
+
+// 햄버거 버튼 눌렀을 때
+.menu-list-area {
+    display: none;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    padding: 2.5rem 0 4rem;
+    background-color: $background-color;
+    header {
+        margin-bottom: 2rem;
+        border-bottom: 0;
+
+        a {
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .none-class-box {
+        width: 100%;
+        padding: 1.5rem 2.85rem 1.9rem 2.15rem;
+        border-radius: 1.5rem;
+        background: $main-color;
+        box-sizing: border-box;
+        img {
+            width: 100%;
+        }
+    }
+    .have-class-box {
+        width: 100%;
+        box-sizing: border-box;
+        img {
+            width: 100%;
+            border-radius: 1.5rem;
+        }
+    }
+    .none-class-ment, .have-class-ment {
+        margin: 2rem 0;
+        text-align: center;
+        strong {
+            font-size: 1.8rem;
+            font-weight: bold;
+            line-height: 2.7rem;
+            >span {
+                margin-left: 0.8rem;
+            }
+        }
+        p, span {
+            margin-top: 0.4rem;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+        }
+        select {
+            display: block;
+            position: relative;
+            margin: 2rem auto 0;
+            padding: 1.15rem 5.65rem 1.15rem 3.5rem;
+            border: 0.1rem solid $main-color;
+            border-radius: 5rem;
+            color: $main-color;
+            font-weight: 500;
+            font-size: 1.4rem;
+            appearance: none;
+            background: #fff url('../images/mo_list_arrow.png') right 3.6rem center no-repeat;
+            background-size: 0.9rem 0.45rem;
+            box-sizing: border-box;
+            &:focus {
+                outline: none;
+            }
+            option {
+                font-size: 1.4rem;
+                color: #000;
+            }
+        }
+        .select-box {
+            position: relative;
+            width: 15.6rem;
+            margin: 2rem auto 0;
+            >a {
+                display: block;
+                margin-bottom: 0.3rem;
+                padding: 1.15rem 2.5rem 1.15rem 0;
+                border: 0.1rem solid $main-color;
+                border-radius: 5rem;
+                color: $main-color;
+                font-size: 1.4rem;
+                font-weight: 500;
+                background: #fff url('../images/mo_list_arrow.png') right 3rem center no-repeat;
+                background-size: 0.9rem 0.45rem;
+            }
+            .option-list {
+                display: none;
+                position: absolute;
+                width: 100%;
+                border-radius: 0.5rem;
+                background-color: #fff;
+                box-shadow: 0.14rem 0.37rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+                li {
+                    border-bottom: 0.1rem solid #e0e0e0;
+                    &:last-child {
+                        border: 0;
+                    }
+                    a {
+                        display: block;
+                        padding: 1.3rem 0;
+                        font-size: 1.4rem;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    .menu-list-btn {
+        li {
+            border-bottom: 0.1rem solid #e0e0e0;
+            &:last-child {
+                border: 0;
+            }
+            a {
+                display: block;
+                padding: 1.9rem 0.5rem;
+                color: #000;
+                font-size: 1.6rem;
+                font-weight: 500;
+                letter-spacing: -0.08rem;
+
+                img {
+                    width: 0.55rem;
+                }
+            }
+        }
+    }
+    .menu-btn-group {
+        flex-wrap: wrap;
+        margin-top: 3.15rem;
+        a {
+            width: calc(50% - 0.4rem);
+            height: 3.6rem;
+            margin-bottom: 0.8rem;
+            line-height: 3.6rem;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+        >.border_btn {
+            line-height: 3.4rem;
+        }
+    }
+    .logout-btn {
+        margin-top: 7.7rem;
+        height: 3.6rem;
+        line-height: 3.4rem;
+        font-size: 1.3rem;
+    }
+}
