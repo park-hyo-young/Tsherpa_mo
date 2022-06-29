@@ -231,7 +231,7 @@ label {
 // 팝업
 .class-mack-popup {
     position: absolute;
-    height: 100%;
+    height: calc(100% - 66px);
     width: 100%;
     top: 6.6rem;
     background-color: rgba(0,0,0,0.4);

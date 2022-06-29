@@ -1,7 +1,9 @@
 // 로그인 하시겠습니까? 화면
 .login-box {
-    padding: 6rem 0 13rem;
+    height: calc(100vh - 6.6rem);
+    padding: 6rem 0 0;
     background-color: $background-color;
+    box-sizing: border-box;
     // 환영문구
     .login-main-title, .login-main-title > span{
         margin-bottom: 4rem;
@@ -45,6 +47,7 @@
             }
         }
         &.go-student {
+            margin-bottom: 6rem;
             background: #ff7e00 url('../images/mp_login_student.png') no-repeat right top;
             background-size: 15rem 16rem;
             &::before {
