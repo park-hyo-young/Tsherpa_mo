@@ -52,4 +52,7 @@ $(document).ready(function(){
             clickable: true,
         },
     });
+    $('.nav_btn').on('click', function(){
+        $('.menu-list-area').show()
+    });
 })

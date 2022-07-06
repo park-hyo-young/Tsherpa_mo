@@ -166,8 +166,8 @@
     background-color: rgba(0,0,0,0.5);
     z-index: 100;
     .share-box {
-        width: 100%;
-        margin-top: 12.5rem;
+        width: 32rem;
+        margin: 12.5rem auto 0;
         .popup-header {
             position: relative;
             padding: 1.6rem 0;
@@ -194,29 +194,35 @@
             }
         }
         .share-icon-box {
+            flex-wrap: wrap;
             margin: 0 auto;
             padding: 2.4rem 3rem 2.2rem;
             border-radius: 0 0 0.8rem 0.8rem;
             background-color: #fff;
-            .share-icon-shoutcut {
-                margin-bottom: 3rem;
-                a {
-                    display: block;
-                    position: relative;
+            .share-btn {
+                display: block;
+                position: relative;
+                width: 4.8rem;
+                margin-left: 2.25rem;
+                margin-bottom: 1.6rem;
+                color: #999;
+                font-size: 1.3rem;
+                text-align: center;
+                letter-spacing: -0.065rem;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:nth-child(4n + 1) {
+                    margin-left: 0;
+                }
+                img {
                     width: 4.8rem;
-                    margin-bottom: 1.6rem;
-                    color: #999;
-                    font-size: 1.3rem;
-                    text-align: center;
-                    letter-spacing: -0.065rem;
-                    img {
-                        width: 4.8rem;
-                        margin-bottom: 0.8rem;
-                    }
+                    margin-bottom: 0.8rem;
                 }
             }
             .link-copy {
                 width: 100%;
+                margin-top: 1.4rem;
                 box-sizing: border-box;
                 a {
                     display: block;

@@ -18,14 +18,25 @@
             margin-bottom: 1.2rem;
         }
         .membership-code-ment {
-            margin-bottom: 2.3rem;
+            position: relative;
+            padding-left: 0.8rem;
             color: #bbb;
+            word-break: keep-all;
             font-size: 1.2rem;
             line-height: 1.8rem;
-            letter-spacing: -0.09rem;
+            letter-spacing: -0.048rem;
+            &::before {
+                position: absolute;
+                content: '*';
+                left: 0;
+                top: 0.3rem;
+                color: #bbb;
+                font-size: 1.2rem;
+                
+            }
         }
         .checkbox-arer {
-            margin-bottom: 1.6rem;
+            margin: 3.1rem 0 1.6rem;
             input[type="checkbox"] {
                 &:checked {
                     & + label::after {
