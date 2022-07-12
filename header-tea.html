@@ -1,10 +1,10 @@
 <header>
    <div class="inner cf">
-       <h1><a href="main-student.html"><img src="images/mo_logo.png" alt="우리반 티셀파"></a></h1>
+       <h1><a href="#none"><img src="images/mo_logo.png" alt="우리반 티셀파"></a></h1>
        <a href="#none" class="nav_btn"><img src="images/mo_ico_menu.png" alt="메뉴버튼"></a>
    </div>
 </header>
-<div class="menu-list-area popup-pos">
+<div class="menu-list-area popup-pos tea-list-popup">
    <div class="inner">
        <div class="list-popup flex-btw">
            <h2><a href="#none"><img src="images/mo_ic_home.png" alt="홈화면으로"></a></h2>
@@ -28,11 +28,6 @@
         <div class="have-class-ment">
             <p>서울 가산초등학교</p>
             <strong>3학년 3반<span>학급정원 20명</span></strong>
-            <!-- <select>
-                <option value="클래스이동">클래스 이동</option>
-                <option value="3학년3반">3학년 3반</option>
-                <option value="4학년우리반">4학년 우리반</option>
-            </select> -->
             <div class="select-box">
                 <a href="#none">클래스 이동</a>
                 <ul class="option-list up">
@@ -61,22 +56,23 @@
 </div>
 
 <script>
-   $(function(){
-      $('.nav_btn').on('click', function(){
-         $('.menu-list-area').show()
-      });
-      $('.list-popup > a').on('click', function(){
-         $('.menu-list-area').hide()
-      });
-      $('.select-box > a').on('click', function(e){
-         e.preventDefault();
-         if($('.select-box > .option-list').hasClass('up') === true) {
-            $('.option-list').removeClass('up');
-            $('.option-list').slideDown(300);
-         } else {
-            $('.option-list').addClass('up');
-            $('.option-list').slideUp(300);
-         }
-      }); 
-   })
+   $('.nav_btn').on('click', function(){
+      $('.menu-list-area').show()
+      $('.wrap').addClass('popup-tea-height');
+   });
+   $('.list-popup > a').on('click', function(){
+      $('.menu-list-area').hide()
+      $('.wrap').removeClass('popup-tea-height');
+   });
+
+   $('.select-box > a').on('click', function(e){
+      e.preventDefault();
+      if($('.select-box > .option-list').hasClass('up') === true) {
+         $('.option-list').removeClass('up');
+         $('.option-list').slideDown(300);
+      } else {
+         $('.option-list').addClass('up');
+         $('.option-list').slideUp(300);
+      }
+   });
 </script>

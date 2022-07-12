@@ -1,6 +1,6 @@
 <header>
     <div class="inner cf">
-        <h1><a href="main-student.html"><img src="images/mo_logo.png" alt="우리반 티셀파"></a></h1>
+        <h1><a href="#none"><img src="images/mo_logo.png" alt="우리반 티셀파"></a></h1>
         <a href="#none" class="nav_btn"><img src="images/mo_ico_menu.png" alt="메뉴버튼"></a>
     </div>
 </header>
@@ -36,3 +36,14 @@
         <a href="#none" class="btns border_btn logout-btn">로그아웃</a>
     </div>
 </div>
+
+<script>
+    $('.nav_btn').on('click', function(){
+        $('.menu-list-area').show()
+        $('.wrap').addClass('popup-stu-height');
+    });
+    $('.list-popup > a').on('click', function(){
+        $('.menu-list-area').hide()
+        $('.wrap').removeClass('popup-stu-height');
+    });
+</script>
