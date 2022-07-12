@@ -44,6 +44,7 @@
 // 개설된 클래스 있는 학급관리 화면
 .offcial-content-area {
     height: calc(100vh - 14rem);
+    min-height: 45rem;
     box-sizing: border-box;
     background-color: $background-color;
     
@@ -164,12 +165,16 @@
     height: 100%;
     top: 0;
     background-color: rgba(0,0,0,0.5);
+    padding: 1.5rem;
     z-index: 100;
+    box-sizing: border-box;
     .share-box {
+        position: relative;
         width: 32rem;
-        margin: 12.5rem auto 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         .popup-header {
-            position: relative;
             padding: 1.6rem 0;
             text-align: center;
             border-radius: 0.8rem 0.8rem 0 0;
@@ -195,7 +200,6 @@
         }
         .share-icon-box {
             flex-wrap: wrap;
-            margin: 0 auto;
             padding: 2.4rem 3rem 2.2rem;
             border-radius: 0 0 0.8rem 0.8rem;
             background-color: #fff;
@@ -331,6 +335,10 @@
         table {
             width: 100%;
             text-align: center;
+            table-layout: fixed;
+            caption {
+                display: none;
+            }
             th {
                 font-size: 1.3rem;
                 letter-spacing: -0.065rem;
@@ -339,22 +347,13 @@
                 color: #666;
                 font-size: 1.2rem;
                 letter-spacing: -0.06rem;
+                @include ellipsis;
             }
             th, td {
                 height: 4.45rem;
                 line-height: 4.45rem;
                 
-                &.stu-num-list {
-                    width: 16%;
-                }
-                &.stu-name-list {
-                    width: 28%;
-                }
-                &.stu-id-list {
-                    width: 28%;
-                }
                 &.stu-pass-list {
-                    width: 28%;
                     a {
                         display: inline-block;
                         width: 1.45rem;
@@ -373,8 +372,12 @@
             }
             tr {
                 border-bottom: 0.1rem solid #e0e0e0;
-                &:last-child {
-                    border: 0;
+            }
+            tbody {
+                tr {
+                    &:last-child {
+                        border: 0;
+                    }
                 }
             }
         }
@@ -434,6 +437,21 @@
         .next-btns {
             a {
                 margin-left: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .share-box {
+        width: 28rem !important;
+        .share-btn {
+            margin-left: 0.9rem !important;
+            &:first-child {
+                margin-left: 0 !important;
+            }
+            &:nth-child(4n + 1) {
+                margin-left: 0 !important;
             }
         }
     }

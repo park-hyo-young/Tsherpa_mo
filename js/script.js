@@ -1,8 +1,14 @@
 $(document).ready(function(){
-    
-    $('head').load('head.html');
-    $('#header-loding').load('header.html');
-    $('#header-loding-login').load('header-login.html');
+    // include 함수
+    includeLayout();
+
+    // 햄버거 메뉴 클릭시
+    $('.nav_btn').on('click', function(){
+        $('.menu-list-area').show()
+    });
+    $('.list-popup > a').on('click', function(){
+        $('.menu-list-area').hide()
+    });
 
     $('.select-box > a').on('click', function(e){
         e.preventDefault();
@@ -52,7 +58,16 @@ $(document).ready(function(){
             clickable: true,
         },
     });
-    $('.nav_btn').on('click', function(){
-        $('.menu-list-area').show()
-    });
 })
+
+function includeLayout() {
+    var includeArea = $('[data-include]');
+    var self, url;
+    $.each(includeArea, function(){
+        self = $(this);
+        url = self.data('include');
+        self.load(url, function(){
+            self.removeAttr('data-include');
+        });
+    });
+}
