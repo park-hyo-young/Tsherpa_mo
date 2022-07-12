@@ -2,6 +2,7 @@ $(document).ready(function(){
     // include 함수
     includeLayout(); 
     
+    // 팝업 show/hide
     $('.stu-code-box > a').click(function(e){
         e.preventDefault();
         $('.popup-share').show();
@@ -11,6 +12,7 @@ $(document).ready(function(){
         $('.popup-share').hide();
     });
 
+    // 이름순/번호순, 페이지 이동 버튼에 active
     $('.list-menu-group > a, .next-pagebtn-group > .page-num').on('click',function(e){
         e.preventDefault();
         if($(this).hasClass('active') === true) {
@@ -21,6 +23,7 @@ $(document).ready(function(){
         }
     });
 
+    // 비밀번호 보일 때, 안보일 때 이미지 변경
     $('.stu-pass-list > a').on('click',function(e){
         e.preventDefault();
         if($(this).hasClass('pass-show') === true) {
@@ -32,6 +35,7 @@ $(document).ready(function(){
         }
     });
     
+    // 학급관리 화면 class 이동 슬라이드
     var swiper = new Swiper(".class-offcial-box", {
         spaceBetween: 50,
         pagination: {
@@ -41,6 +45,7 @@ $(document).ready(function(){
     });
 })
 
+// lode html
 function includeLayout() {
     var includeArea = $('[data-include]');
     var self, url;
