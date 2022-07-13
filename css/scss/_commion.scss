@@ -23,7 +23,7 @@ $background-color : #f2f7fc;
         position: relative;
     }
     &.popup-tea-height {
-        min-height: 100rem;
+        max-height: 100rem;
         box-sizing: border-box;
         overflow: hidden;
     }
